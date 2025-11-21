@@ -9,3 +9,11 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@media (mind-width: 1400px){
+.fixed-xxl-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}};
