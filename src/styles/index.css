@@ -28,8 +28,11 @@
   &.red { background-color: #990000;}
   &.yellow {background-color: #CC6600; }
   &.green { background-color: #009933; }
+  &.purple {background-color: purple;}
   &.selected{box-shadow: #f8ffcc 0px 0px 50px 20px;}
 }
+
+
 
 @media (mind-width: 1400px){
 .fixed-xxl-bottom {
