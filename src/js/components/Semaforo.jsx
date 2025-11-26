@@ -23,14 +23,18 @@ const Semaforo = () => {
                 <div onClick={() => setColor("red")} className={"light red" + (color === "red" ? " selected" : "")}></div>
                 <div onClick={() => setColor("yellow")} className={"light yellow" + (color === "yellow" ? " selected" : "")}></div>
                 <div onClick={() => setColor("green")} className={"light green" + (color === "green" ? " selected" : "")}></div>
+
+
+                {mostrarPurpura ? (<div onClick={() => setColor("purple")} className={"light purple" + (color === "purple" ? " selected" : "")}></div>)
+                    : null
+                }
             </div>
 
-            {mostrarPurpura ? (<div onClick={() => setColor("purple")} className={"light purple" + (color === "purple" ? " selected" : "")}></div>)
-                : null
-            }
-            <button className="btn btn-outline-secondary mt-5" onClick={() => setColor(null)}>Sin luz</button>            
-            <button className="btn btn-outline-secondary mt-3" onClick={() => setMostrarPurpura(true)}>Agregar purpura</button>
-            <button className="btn btn-outline-secondary mt-3" onClick={arternarLuz}>Alterna luz</button>
+            <div id="botones">
+                <button className="btn btn-outline-secondary mt-5" onClick={() => setColor(null)}>Sin luz</button>
+                <button className="btn btn-outline-secondary mt-3" onClick={() => setMostrarPurpura(!mostrarPurpura)}>{mostrarPurpura ? "Quitar púrpura" : "Agregar púrpura"}</button>
+                <button className="btn btn-outline-secondary mt-3" onClick={arternarLuz}>Alterna luz</button>
+            </div>
         </div>
     );
 };

@@ -1,44 +1,81 @@
 #semaforo-agrupado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #trafficTop {
   background-color: black;
   width: 10px;
-  height: 70px;  
+  height: 70px;
 }
 
 #container {
   background-color: black;
   width: 65px;
-  height: 173px;
+  height: 230px;
   padding: 7px;
   border-radius: 10px;
 }
 
-.light{
+#botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.light {
   width: 50px;
-  height: 50px;  
+  height: 50px;
   border-radius: 50%;
   padding: 20px;
   cursor: pointer;
   margin-bottom: 5px;
-  &.red { background-color: #990000;}
-  &.yellow {background-color: #CC6600; }
-  &.green { background-color: #009933; }
-  &.purple {background-color: purple;}
-  &.selected{box-shadow: #f8ffcc 0px 0px 50px 20px;}
+
+  &.red {
+    background-color: red;
+  }
+
+  &.yellow {
+    background-color: yellow;
+  }
+
+  &.green {
+    background-color: green;
+  }
+
+  &.purple {
+    background-color: purple;
+  }
+
+  &.red.selected {
+    box-shadow: red 0px 0px 50px 20px;
+  }
+
+  &.yellow.selected {
+    box-shadow: yellow 0px 0px 50px 20px;
+  }
+
+  &.green.selected {
+    box-shadow: green 0px 0px 50px 20px;
+  }
+
+  &.purple.selected {
+    box-shadow: purple 0px 0px 50px 20px;
+  }
 }
 
 
 
-@media (mind-width: 1400px){
-.fixed-xxl-bottom {
+@media (mind-width: 1400px) {
+  .fixed-xxl-bottom {
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1030;
-}};
+  }
+}
+
+;
